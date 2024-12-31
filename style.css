@@ -1,0 +1,28 @@
+.feature {
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-featured-blog {
+    height: 100%;
+    width: 100%;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height: 15rem;
+}
+
+.photo {
+    height: 40px;
+    width: 40px;
+}
+
+.photo-2 {
+    height: 50px;
+    width: 50px;
+}
+
