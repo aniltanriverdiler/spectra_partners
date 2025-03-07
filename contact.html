@@ -278,61 +278,7 @@
     </footer>
 
     <!-- Script Section -->
-
-    <!-- JavaScript -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const form = document.getElementById("contactForm");
-        const inputs = form.querySelectorAll("input, textarea");
-        const submitButton = document.getElementById("submitButton");
-
-        // Input alanlarını kontrol et ve butonu aktif/pasif yap
-        function checkForm() {
-          let allValid = true;
-          inputs.forEach((input) => {
-            if (!input.value.trim() || !input.checkValidity()) {
-              allValid = false;
-            }
-          });
-          submitButton.disabled = !allValid;
-        }
-
-        // Input alanları için geri bildirim göster
-        function showValidationFeedback(input) {
-          if (input.checkValidity()) {
-            input.classList.remove("is-invalid");
-            input.classList.add("is-valid");
-          } else {
-            input.classList.remove("is-valid");
-            input.classList.add("is-invalid");
-          }
-        }
-
-        // Her bir input alanı için event listener ekle
-        inputs.forEach((input) => {
-          input.addEventListener("input", () => {
-            checkForm();
-            showValidationFeedback(input);
-          });
-
-          // Blur event'i ile alan terk edildiğinde geri bildirim göster
-          input.addEventListener("blur", () => {
-            showValidationFeedback(input);
-          });
-        });
-
-        // Form submit edildiğinde kontrol et
-        form.addEventListener("submit", function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add("was-validated");
-        });
-      });
-    </script>
-
-    <!-- Bootstrap Script -->
+    <script src="main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
